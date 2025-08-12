@@ -1,0 +1,78 @@
+/* Background for all pages */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+/* Destination cards */
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero {
+        height: 70vh;
+    }
+}
